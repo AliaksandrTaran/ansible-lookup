@@ -1,0 +1,9 @@
+- hosts: localhost
+  vars:
+     contents: "{{ lookup('file', '/etc/passwd') }}"
+     
+
+  tasks:
+
+     - debug: msg="the value of /etc/passwd is {{ contents }} as seen today {{ lookup('pipe', 'date +"%Y-%m-%d"') }}"
+

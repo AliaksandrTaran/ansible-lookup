@@ -1,0 +1,9 @@
+- name: Cache
+  hosts: localhost
+
+  tasks:
+  - name:Check work 
+    cache:
+	filepath:'.'
+    debug: 
+	msg:"OK!"
